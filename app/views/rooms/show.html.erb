@@ -1,0 +1,11 @@
+<%= @room.name %>
+<%= @room.capacity %>
+<%= button_to "Batalkan ruangan",@room, method: :delete %>
+
+<% @room.bookings.each do |booking| %>
+<p>Mulai : <%= booking.start %></p>
+<p>Selesai : <%= booking.end %></p>
+<p>Purpose : <%= booking.purpose %></p>
+<p><%= link_to "Booking", booking %></p>
+
+<% end %>

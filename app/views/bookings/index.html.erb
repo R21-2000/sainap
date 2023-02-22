@@ -1,0 +1,21 @@
+<h2> Daftar Booking </h2>
+<% @bookings.each do |booking| %>
+<p>
+    Check in :<%= booking.start %>
+</p>
+<p>
+    Check out:<%= booking.end %>
+</p>
+<p>
+
+    Tujuan :<%= booking.purpose %>
+</p>
+
+<p>
+
+    Ruangan :
+    <%=link_to booking.room.name, booking.room %>
+</p>
+
+<% end %>
+<%= link_to "Create new booking", new_booking_path %>
